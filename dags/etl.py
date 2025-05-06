@@ -89,5 +89,5 @@ with DAG(
     api_response=extract_apod.output
     ## Transform
     transformed_data = transform_apod_data(api_response)
-    ## Load
+    ## Load the data in postgres
     load_data_to_postgres(transformed_data)
